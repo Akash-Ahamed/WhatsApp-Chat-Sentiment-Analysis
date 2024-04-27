@@ -19,7 +19,7 @@ The first step of  Data Preprocessing is to gather the data. Here we use a whats
 After gathering the *.txt* file, our main preprocessing work will start, where we used Jupyter Notebook for data preprocessing.
 
 ## Export WhatsApp Chat:
-1. Navigate to the chat you wish to analyze. It may be a private or group chat.
+1. Navigate to the chat you wish to analyze. It may be a private or group chat. Open chat click option (Three dot).
 <p align="center">
 <img src="assets/extras/4-the-office.gif" width=350>
 </p>  
