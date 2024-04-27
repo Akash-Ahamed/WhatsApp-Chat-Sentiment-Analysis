@@ -14,6 +14,6 @@ You can check out the live demo website [here](https://github.com/pankajkanani/w
 
 Show a Image of Website......
 # Data Preprocessing:
-Write some thing here....
+The first step of  Data Preprocessing is to gather the data. Here we use a whatsApp chat real data.
 ## Export WhatsApp Chat:
 How to Export data from Whatsapp
