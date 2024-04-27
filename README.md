@@ -38,5 +38,5 @@ After gathering the *.txt* file, our main preprocessing work will start, where w
 <img src="assets/WhatsApp-4.jpg" width=350>
 </p>  
 
-## NOTE:
+### NOTE:
 ## Open this export .txt file:
