@@ -25,3 +25,15 @@ After gathering the *.txt* file, our main preprocessing work will start, where w
 </p>  
 
 2. ddffd
+<p align="center">
+<img src="assets/WhatsApp-2.jpg" width=350>
+</p>  
+
+3. sfdfsd
+<p align="center">
+<img src="assets/WhatsApp-3.jpg" width=350>
+</p>  
+4. nnnnn
+<p align="center">
+<img src="assets/WhatsApp-4.jpg" width=350>
+</p>  
