@@ -1,2 +1,2 @@
 # WhatsApp Chat Sentiment Analysis\n
-##### Author: Akash Ahamed
+##### *Author:* Akash Ahamed
