@@ -21,7 +21,7 @@ After gathering the *.txt* file, our main preprocessing work will start, where w
 ## Export WhatsApp Chat:
 1. Navigate to the chat you wish to analyze. It may be a private or group chat. Open chat click option (Three dot).
 <p align="center">
-<img src="assets/extras/4-the-office.gif" width=350>
+<img src="assets/WhatsApp-1.jpg" width=350>
 </p>  
 
 2. ddffd
