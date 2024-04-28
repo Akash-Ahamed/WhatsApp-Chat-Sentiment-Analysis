@@ -94,7 +94,7 @@ After the find .txt file pattern we perform some basic data  manipulation task f
     dates = re.findall(pattern, data)
     messages = re.split(pattern, data)[1:]
 
-#### Create DataFrame for Separate Messages and Dates
+#### Create DataFrame for Separate Messages and Dates:
 
     date=[]
     times=[]
@@ -114,3 +114,24 @@ After the find .txt file pattern we perform some basic data  manipulation task f
       }) 
     
     df.head(3)
+
+#### Separate Users and Messages:
+    
+    users =[]
+    messages=[]
+
+    for i in df['User_Messages']:
+        whole_messages = re.split('([\w\W]+?):\s',i)
+        if whole_messages[1:]:
+          users.append(whole_messages[1])
+          messages.append(whole_messages[2])
+        else:
+          users.append('group_notification')
+          messages.append(whole_messages[0])
+
+        df['user']= users
+        
+    df['message']= messages
+    df.drop(columns=['User_Messages'], inplace=True)
+    df.head(15)
+
