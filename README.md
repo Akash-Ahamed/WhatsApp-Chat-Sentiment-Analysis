@@ -113,7 +113,7 @@ After the find .txt file pattern we perform some basic data  manipulation task f
         'time': time,
       }) 
     
-    df.head(3)
+    df.head()
 
 #### Separate Users and Messages:
     
@@ -133,5 +133,14 @@ After the find .txt file pattern we perform some basic data  manipulation task f
         
     df['message']= messages
     df.drop(columns=['User_Messages'], inplace=True)
-    df.head(15)
+    df.head()
 
+#### Separate Day, Month, and Year:
+
+    df['date']=pd.to_datetime(df['date'])
+
+    df['year']=df['date'].dt.year
+    df['month']=df['date'].dt.month_name()
+    df['day'] = df['date'].dt.day_name()
+    
+    df.head(5)
