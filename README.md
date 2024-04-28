@@ -16,7 +16,7 @@ You can check out the live demo website [here](https://github.com/pankajkanani/w
 Show a Image of Website......
 # Data Preprocessing:
 The first step of  Data Preprocessing is to gather the data. Here we use a whatsApp chat real data. 
-WhatsApp has a built-in feature for Export chat. WhatsApp Export chat feature allows to export chat messages as a .txt file.
+WhatsApp has a built-in feature for Export chat messages. WhatsApp Export chat feature allows to export chat messages as a .txt file.
 After gathering the *.txt* file, our main preprocessing work will start, where we used Jupyter Notebook for data preprocessing.
 
 ## Export WhatsApp Chat.
@@ -44,4 +44,5 @@ To export android WhatsApp chat history from a chat. Go to the respective chat w
 </p>  
 
 #### NOTE: Here I select without media chat because we can only export 10,000 messages with media files and 40,000 messages without media files.
-## Open this export .txt file:
+## Open the Export .txt file:
+After the export chat history successfully we got a .zip file. After the unzip we find a .txt file. Opening the .txt file we get chat messages which look like the below format.
