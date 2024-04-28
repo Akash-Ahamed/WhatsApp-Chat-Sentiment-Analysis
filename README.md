@@ -19,7 +19,9 @@ The first step of  Data Preprocessing is to gather the data. Here we use a whats
 After gathering the *.txt* file, our main preprocessing work will start, where we used Jupyter Notebook for data preprocessing.
 
 ## Export WhatsApp Chat.
-Navigate to the chat you wish to analyze. It may be a private or group chat.
+Navigate to the chat you wish to analyze. It may be a private or group chat. 
+To export android WhatsApp chat history from a chat. Go to the respective chat which wants to Export and Open the chat.
+
 
 1. Open chat click option (Three dot).
 <p align="center">
@@ -35,7 +37,7 @@ Navigate to the chat you wish to analyze. It may be a private or group chat.
 <p align="center">
 <img src="assets/WhatsApp-3.jpg" width=350>
 </p>  
-4. Tap on Export without media.
+4. Tap on Export Without Media.
 <p align="center">
 <img src="assets/WhatsApp-4.jpg" width=350>
 </p>  
