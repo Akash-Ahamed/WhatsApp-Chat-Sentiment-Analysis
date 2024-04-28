@@ -40,12 +40,12 @@ To export android WhatsApp chat history from a chat. Go to the respective chat w
 </p>  
 4. Tap on Export Without Media.
 <p align="center">
-<img src="assets/WhatsApp-4.jpg" >
+<img src="assets/WhatsApp-4.jpg" width=350 >
 </p>  
 
 #### NOTE: Here I select without media chat because we can only export 10,000 messages with media files and 40,000 messages without media files.
 ## Open the Export .txt file:
 After the export chat history successfully we got a .zip file. After the unzip we find a .txt file. Opening the .txt file we get chat messages which look like the below format.
 <p align="center">
-<img src="assets/WhatsApp-5.jpg" width=350>
+<img src="assets/WhatsApp-5.jpg" >
 </p>
