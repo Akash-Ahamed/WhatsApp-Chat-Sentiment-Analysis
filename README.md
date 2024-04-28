@@ -11,6 +11,14 @@
       - Show New DataFrame
   - Data Analysis
       - Show Overall Analysis
+          - Overall Analysis
+          - Most Active User
+          - Most Common Words
+          - Most Used Emoji 
+          - Most Activity Map
+          - Daily Timeline
+          - Month Timeline
+      - Show Selected User Analysis
 - Display DataFrame
 - Conclusion
 
