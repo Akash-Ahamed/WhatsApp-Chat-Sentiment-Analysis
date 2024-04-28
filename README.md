@@ -82,4 +82,5 @@ To perform data preprocessing work we need some library to convert raw data into
     data = file.read()
 ## Regular Expression:
 Regular expressions are a sequence of characters used to define a search pattern for text. We used Python Regular Expression to extracting data and message from the .txt file.
+    
     pattern =r'\d{1,2}/\d{1,2}/\d{2,4},\s*\d{1,2}:\d{2}\s*[AP]M\s-\s'
