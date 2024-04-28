@@ -78,3 +78,5 @@ To perform data preprocessing work we need some library to convert raw data into
 
 #### Upload WhatsApp Chat File: 
     file = open ('WhatsApp Chat with তারা ৩জন.txt','r', encoding='utf8')
+#### Read the File as String Format: 
+    data = file.read()
