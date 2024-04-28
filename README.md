@@ -80,3 +80,6 @@ To perform data preprocessing work we need some library to convert raw data into
     file = open ('WhatsApp Chat with তারা ৩জন.txt','r', encoding='utf8')
 #### Read the File as String Format: 
     data = file.read()
+## Regular Expression:
+Regular expressions are a sequence of characters used to define a search pattern for text. We used Python Regular Expression to extracting data and message from the .txt file.
+    pattern =r'\d{1,2}/\d{1,2}/\d{2,4},\s*\d{1,2}:\d{2}\s*[AP]M\s-\s'
