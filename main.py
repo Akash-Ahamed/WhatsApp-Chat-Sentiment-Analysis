@@ -4,8 +4,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 import PIL.Image
 
+
+
+
+col1,col2 = st.columns([0.2,1], gap="small")
+with col1:
+    st.image("assets\whatsapp.png", width=80, )
+with col2:
+    st.title("WhatsApp Chat Analyzer\n Analysis Your Group or Single Chat")
+
+
 # Basic Streamlit Setting and  Load the text file.............................. 
-st.sidebar.title("Chat Analyzer")
+st.sidebar.title("Analysis Your Group or Single Chat")
+
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
 # To read file as bytes. so it is a bytes data stream file, which we need to convert into string file.   
@@ -16,6 +27,7 @@ if uploaded_file is not None:
     df= preprocessor.preprocess(data)
 
 # Disply the DataFrame using streamlit
+    st.subheader("Your WhatsApp Chat Messages")
     st.dataframe(df)
 
 # Streamlit web page Setting.....................................................
@@ -40,6 +52,7 @@ if uploaded_file is not None:
         num_messages,words, num_media_messages,num_links=helper.fetch_stats(selected_user,df)
 
 # Webpage divided into 4 columns
+        st.title("Overall Analysis")
         col1, col2, col3, col4 =st.columns(4, gap="medium")
 # First Columns Contains....................................................................................
         with col1:
@@ -70,8 +83,38 @@ if uploaded_file is not None:
 
             with col2:
                 st.dataframe(percentage)
-        # weekly activity map show
-        st.title("Activity Map")
+        
+    # Most Common Words
+        st.title("Most Common Words")
+        col1, col2 = st.columns(2, gap='medium')
+        
+        with col1:
+            most_common_df = helper.most_common_words(selected_user,df)
+            st.dataframe(most_common_df)
+        
+        with col2:
+            fig, ax = plt.subplots()
+            ax.barh(most_common_df[0],most_common_df[1])
+            st.pyplot(fig)
+    
+    
+     # Most Used Emoji
+        st.title("Most Used Emoji")
+        emoji_df = helper.emoji_helper(selected_user, df)
+        col1, col2= st.columns(2)
+        
+        with col1:
+            st.dataframe(emoji_df)
+        
+        with col2:
+            fig, ax = plt.subplots()
+            ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(), autopct = "%0.2f")
+            st.pyplot(fig)
+
+
+
+    # Most activity map show
+        st.title("Most Activity Map")
         col1, col2=st.columns(2)
 
         with col1:
@@ -91,6 +134,15 @@ if uploaded_file is not None:
             st.pyplot(fig)
 
 
+     # Daily timeline
+        st.title("Daily Timeline")
+        date_timeline = helper.daily_timeline(selected_user, df)
+
+        fig,ax=plt.subplots()
+        ax.plot(date_timeline['date'],date_timeline['message'])
+        plt.xticks(rotation='vertical')
+        st.pyplot(fig)
+
 
         # Wordcloud
        # st.title("Wordcloud")
@@ -100,32 +152,8 @@ if uploaded_file is not None:
        # st.pyplot(fig)*/
 
 
-    # Most Common Words
-        st.title("Most Common Word")
-        col1, col2 = st.columns(2, gap='medium')
-        
-        with col1:
-            most_common_df = helper.most_common_words(selected_user,df)
-            st.dataframe(most_common_df)
-        
-        with col2:
-            fig, ax = plt.subplots()
-            ax.barh(most_common_df[0],most_common_df[1])
-            st.pyplot(fig)
+    
    
-    # Emoji analysis
-        st.title("Emoji Annlysis")
-        emoji_df = helper.emoji_helper(selected_user, df)
-        col1, col2= st.columns(2)
-        
-        with col1:
-            st.dataframe(emoji_df)
-        
-        with col2:
-            fig, ax = plt.subplots()
-            ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(), autopct = "%0.2f")
-            st.pyplot(fig)
-
     # Timeseries of message
         st.title("Monthly Timeline")
         timeline=helper.month_timeline(selected_user,df)
@@ -134,12 +162,5 @@ if uploaded_file is not None:
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
 
-    # Daily timeline
-        st.title("Daily Timeline")
-        date_timeline = helper.daily_timeline(selected_user, df)
-
-        fig,ax=plt.subplots()
-        ax.plot(date_timeline['date'],date_timeline['message'])
-        plt.xticks(rotation='vertical')
-        st.pyplot(fig)
+   
     
