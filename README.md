@@ -8,6 +8,7 @@
   - Manipulate Text Data
       - Import Libraries
       - Regular Expression
+      - Data Manipulating Task
       - Show New DataFrame
   - Data Analysis
       - Show Overall Analysis
@@ -81,6 +82,31 @@ To perform data preprocessing work we need some library to convert raw data into
 #### Read the File as String Format: 
     data = file.read()
 ## Regular Expression:
-Regular expressions are a sequence of characters used to define a search pattern for text. We used Python Regular Expression to extracting data and message from the .txt file.
+Regular expressions are a sequence of characters used to define a search pattern for text. We used Python Regular Expression to extract data and messages from the .txt file. 
     
     pattern =r'\d{1,2}/\d{1,2}/\d{2,4},\s*\d{1,2}:\d{2}\s*[AP]M\s-\s'
+    dates = re.findall(pattern, data)
+    messages = re.split(pattern, data)[1:]
+
+## Data Manipulating Task:
+After the find .txt file pattern we perform some basic data  manipulation task for separated messages and dates. 
+
+    dates = re.findall(pattern, data)
+    messages = re.split(pattern, data)[1:]
+
+#### Create DataFrame for Separate Messages and Dates
+
+    date=[]
+    times=[]
+    for i in dates:
+    `  date.append(i.split(", ")[0])
+      times.append(i.split(", ")[1])
+    time=[]
+    for i in times:
+      time.append(i.split("\u202f")[0])
+    df = pd.DataFrame({
+        'User_Messages':messages,
+        'Message_Date':date,
+        'time': time,
+    }) 
+    df.head(3)
