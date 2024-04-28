@@ -3,6 +3,8 @@ import preprocessor, helper
 import matplotlib.pyplot as plt
 import numpy as np
 import PIL.Image
+import time
+
 
 
 
@@ -19,16 +21,22 @@ st.sidebar.title("Analysis Your Group or Single Chat")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
+
 # To read file as bytes. so it is a bytes data stream file, which we need to convert into string file.   
     bytes_data = uploaded_file.getvalue() 
+    
 # Convert to String from bytes
-    data=bytes_data.decode('utf-8')  
+    data=bytes_data.decode('utf-8')
+    
     #st.text(data)
     df= preprocessor.preprocess(data)
 
 # Disply the DataFrame using streamlit
     st.subheader("Your WhatsApp Chat Messages")
     st.dataframe(df)
+
+#..............................................................................
+    
 
 # Streamlit web page Setting.....................................................
 # Find the How much user exists in the group chat using Unique() function.
@@ -38,14 +46,16 @@ if uploaded_file is not None:
     user_list.sort()
 # First show all user as a Overall name
     user_list.insert(0,"Overall")
+
     
 # Display the sidebar select box and Find which user now selected.
     selected_user = st.sidebar.selectbox("User :",user_list)
 
 
-
+    
 # Start Analysis Button
     if st.sidebar.button("Start Analysis"):
+        
         
 # Analysis Show, totall messages, number of word, number of link, number media file.........................
 # Fetch the totall messages and words
