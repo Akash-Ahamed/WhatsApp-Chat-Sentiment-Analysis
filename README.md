@@ -145,7 +145,7 @@ After the find .txt file pattern we perform some basic data  manipulation task f
     
     df.head()
 
-## Show New DataFrame:
+### Show New DataFrame:
 After performing the preprocessing our final data looks like as shown below.
 <p align="center">
 <img src="assets/dataframe-1.png">
