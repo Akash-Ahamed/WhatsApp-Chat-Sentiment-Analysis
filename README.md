@@ -98,15 +98,19 @@ After the find .txt file pattern we perform some basic data  manipulation task f
 
     date=[]
     times=[]
+    
     for i in dates:
     `  date.append(i.split(", ")[0])
       times.append(i.split(", ")[1])
+    
     time=[]
     for i in times:
       time.append(i.split("\u202f")[0])
+    
     df = pd.DataFrame({
         'User_Messages':messages,
         'Message_Date':date,
         'time': time,
-    }) 
+      }) 
+    
     df.head(3)
