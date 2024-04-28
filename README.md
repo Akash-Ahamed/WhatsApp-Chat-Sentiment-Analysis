@@ -143,4 +143,7 @@ After the find .txt file pattern we perform some basic data  manipulation task f
     df['month']=df['date'].dt.month_name()
     df['day'] = df['date'].dt.day_name()
     
-    df.head(5)
+    df.head()
+
+## Show New DataFrame:
+After performing the preprocessing our final data looks like as shown below.
