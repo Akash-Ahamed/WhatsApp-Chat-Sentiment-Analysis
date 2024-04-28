@@ -76,3 +76,5 @@ To perform data preprocessing work we need some library to convert raw data into
     import re
     import pandas as pd
 
+#### Upload WhatsApp Chat File: 
+    file = open ('WhatsApp Chat with তারা ৩জন.txt','r', encoding='utf8')
