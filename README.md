@@ -150,3 +150,16 @@ After performing the preprocessing our final data looks like as shown below.
 <p align="center">
 <img src="assets/dataframe-1.png">
 </p>
+
+**It's time to conduct analysis on the clean DataFrame that we now have.**
+
+## Data Analysis:
+The act of taking raw data and turning it into information that users can use to make decisions is known as data analysis. Analysis is the process of dissecting a whole thing into its constituent parts for closer inspection. In order to find any relevant information, it involves cleaning, converting, examining, and modeling data. This project provides a basic statistical analysis WhatsApp chat. Following are the analysis made:
+>
+>- To find total messages, total words, and total links shared in the WhatsApp chat.
+>- To find the most active user
+>- To find most common words
+>- To find most used emoji
+>- To find most activity map
+>- To find most daily timeline
+>- To find month timeline
