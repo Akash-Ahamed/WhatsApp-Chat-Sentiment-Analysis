@@ -182,10 +182,29 @@ Is shows the busy users and their contribution to chat We have used matplotlib t
 <p align="center">
 <img src="assets/active user.png">
 </p>
-    
 
+##### Find the Percentage of chat:
+    
+    dfd=round((df['user'].value_counts()/ df.shape[0])*100,2)
+    dfd.reset_index().rename(columns={'user':'name','count':'percent'})
+    
 #### Most Common Words:
 It shows the most commonly used word We have used matplotlib to plot the graph and the top frequently used words are displayed.
+    
+    words_most=[]
+    for i in df['message']:
+      words_most.extend(i.split())
+    Counter(words_most)
+    pd.DataFrame(Counter(words_most).most_common(20))
+# Remove the Group message    
+    temp=df[df['user'] !='group_notification']
+# Remove the media omit and store in  tem variable
+    temp=temp[temp['message']!='<Media omitted>\n']
+    words_most=[]
+    for i in temp['message']:
+      words_most.extend(i.split())
+    pd.DataFrame(Counter(words_most).most_common(20))
+
 #### Most Used Emoji:
 It shows the most commonly used emojis We have used the Emoji library to select or distinguish the emojis from the messages and plotted the pie chart using matplotlib
 
