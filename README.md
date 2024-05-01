@@ -1,4 +1,4 @@
-# WhatsApp Chat Sentiment Analysis
+# WhatsApp Chat Analyzer
 ##### *Author:* Akash Ahamed
 
 ## *Overview*
