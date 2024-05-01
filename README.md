@@ -171,6 +171,18 @@ It displays data such as the total number of words, messages, and shared links. 
 
 #### Most Active User:
 Is shows the busy users and their contribution to chat We have used matplotlib to plot the graph and the users and how frequently the chat is calculated and plotted. 
+    
+    x = df['user'].value_counts().head()
+    name = x.index
+    count = x.values
+    plt.bar(name, count)
+    plt.xticks(rotation='vertical')
+    plt.show()
+
+<p align="center">
+<img src="assets/active user.png">
+</p>
+    
 
 #### Most Common Words:
 It shows the most commonly used word We have used matplotlib to plot the graph and the top frequently used words are displayed.
@@ -184,4 +196,4 @@ It gives the frequency of messages in a day We have used matplotlib to plot the 
 #### Month Timeline:
 It gives the frequency of messages in a whole We have used matplotlib to plot the graph and the months are taken and the count of messages are calculated and plotted.
 
-### Show Overall Analysis
+### Show Selected User Analysis
