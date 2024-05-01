@@ -167,9 +167,21 @@ The act of taking raw data and turning it into information that users can use to
 ### Show Overall Analysis
 
 #### Overall Analysis:
-### Most Active User:
-### Most Common Words:
-### Most Used Emoji:
-### Most Activity Map:
-### Daily Timeline:
-### Month Timeline:
+It displays data such as the total number of words, messages, and shared links. The entire chat file was transformed into a data frame, the words and messages were divided, and URLextract was used to locate links.
+
+#### Most Active User:
+Is shows the busy users and their contribution to chat We have used matplotlib to plot the graph and the users and how frequently the chat is calculated and plotted. 
+
+#### Most Common Words:
+It shows the most commonly used word We have used matplotlib to plot the graph and the top frequently used words are displayed.
+#### Most Used Emoji:
+It shows the most commonly used emojis We have used the Emoji library to select or distinguish the emojis from the messages and plotted the pie chart using matplotlib
+
+#### Most Activity Map:
+It shows the busy days and months. We have used the matplotlib library to plot the graph, the number of messages in a particular month or day are mapped to the particular day or month
+#### Daily Timeline:
+It gives the frequency of messages in a day We have used matplotlib to plot the graph and the days are taken and the count of messages are calculated and plotted.
+#### Month Timeline:
+It gives the frequency of messages in a whole We have used matplotlib to plot the graph and the months are taken and the count of messages are calculated and plotted.
+
+### Show Overall Analysis
