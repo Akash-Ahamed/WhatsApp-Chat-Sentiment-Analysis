@@ -163,3 +163,13 @@ The act of taking raw data and turning it into information that users can use to
 >- To find most activity map
 >- To find most daily timeline
 >- To find month timeline
+
+### Show Overall Analysis
+
+#### Overall Analysis:
+### Most Active User:
+### Most Common Words:
+### Most Used Emoji:
+### Most Activity Map:
+### Daily Timeline:
+### Month Timeline:
