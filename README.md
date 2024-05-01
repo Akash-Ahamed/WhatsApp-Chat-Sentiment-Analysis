@@ -196,9 +196,9 @@ It shows the most commonly used word We have used matplotlib to plot the graph a
       words_most.extend(i.split())
     Counter(words_most)
     pd.DataFrame(Counter(words_most).most_common(20))
-# Remove the Group message    
+###### *Remove the Group message*    
     temp=df[df['user'] !='group_notification']
-# Remove the media omit and store in  tem variable
+###### *Remove the media omit and store in  tem variable*
     temp=temp[temp['message']!='<Media omitted>\n']
     words_most=[]
     for i in temp['message']:
