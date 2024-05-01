@@ -1,5 +1,5 @@
 # WhatsApp Chat Analyzer
-##### *Author:* Akash Ahamed
+##### *Author:* **Akash Ahamed**
 
 ## *Overview*
 - Introduction
