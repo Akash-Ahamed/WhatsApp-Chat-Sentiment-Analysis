@@ -206,7 +206,12 @@ It shows the most commonly used word We have used matplotlib to plot the graph a
     pd.DataFrame(Counter(words_most).most_common(20))
 
 #### Most Used Emoji:
-It shows the most commonly used emojis We have used the Emoji library to select or distinguish the emojis from the messages and plotted the pie chart using matplotlib
+It shows the most commonly used emojis We have used the Emoji library to select or distinguish the emojis from the messages and plotted the pie chart using matplotlib.
+   
+    emojis=[]
+    for i in df['message']:
+      emojis.extend([c for c in i if c in emoji.EMOJI_DATA])
+    pd.DataFrame(Counter(emojis).most_common(len(Counter(emojis))))
 
 #### Most Activity Map:
 It shows the busy days and months. We have used the matplotlib library to plot the graph, the number of messages in a particular month or day are mapped to the particular day or month
