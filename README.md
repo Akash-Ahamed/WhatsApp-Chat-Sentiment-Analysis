@@ -20,7 +20,9 @@
           - Daily Timeline
           - Month Timeline
       - Show Selected User Analysis
-- Display DataFrame
+- WebApp Building
+- Deployment
+- Future Work
 - Conclusion
 
 # *Introduction*:
