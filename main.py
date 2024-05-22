@@ -11,7 +11,8 @@ import time
 
 col1,col2 = st.columns([0.2,1], gap="small")
 with col1:
-    st.image("assets\whatsapp.png", width=80, )
+   st.image("assets\whatsapp.png", width=80, )
+
 with col2:
     st.title("WhatsApp Chat Analyzer\n Analysis Your Group or Single Chat")
 
