@@ -1,17 +1,21 @@
+
 import streamlit as st 
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import numpy as np
 import PIL.Image
+from PIL import Image
 import time
 
 
 
 
 
+image1=Image.open('static/whatsapp.png')
 col1,col2 = st.columns([0.2,1], gap="small")
 with col1:
-   st.image("assets\whatsapp.png", width=80, )
+   #st.image("assets\whatsapp.png", width=80, )
+   st.image(image1, width=80)
 
 with col2:
     st.title("WhatsApp Chat Analyzer\n Analysis Your Group or Single Chat")
